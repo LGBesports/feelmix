@@ -1,0 +1,5 @@
+export { Home } from './Home'
+export { About } from './About'
+export { Showreels } from './Showreels'
+export { Contacts } from './Contacts'
+export { Video } from './Video'

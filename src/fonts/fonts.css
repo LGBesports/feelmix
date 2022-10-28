@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'RFDewi';
+  font-weight: 200;
+  src: url('./RFDewi/RFDewi-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'RFDewi';
+  font-weight: 300;
+  src: url('./RFDewi/RFDewi-Light.ttf');
+}
+
+@font-face {
+  font-family: 'RFDewi';
+  font-weight: 400;
+  src: url('./RFDewi/RFDewi-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'RFDewi';
+  font-weight: 600;
+  src: url('./RFDewi/RFDewi-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'RFDewi';
+  font-weight: 700;
+  src: url('./RFDewi/RFDewi-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'RFDewi';
+  font-weight: 900;
+  src: url('./RFDewi/RFDewi-Ultrabold.ttf');
+}

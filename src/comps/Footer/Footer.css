@@ -1,0 +1,212 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__item_mail {
+  justify-content: flex-start;
+}
+
+.footer__item_whatsapp {
+  justify-content: flex-end;
+}
+
+.footer__link {
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.footer__item_mail {
+  height: auto;
+  position: relative;
+}
+
+.footer__item_mail .footer__link-text::after {
+  content: 'HELLO@FEELMIX.PRO';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -250%);
+}
+
+.footer__item_mail .footer__link-text {
+  animation-name: footer__link_animation_out;
+  animation-fill-mode: backwards;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+  animation-duration: .4s;
+}
+
+.footer__item_mail .footer__link:hover .footer__link-text {
+  animation-name: footer__link_animation_in;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: .4s;
+}
+
+@keyframes footer__link_animation_in {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 200%);
+  }
+}
+
+@keyframes footer__link_animation_out {
+  from {
+    transform: translate(0, 200%);
+  }
+
+  to {
+    transform: translate(0, 0%);
+  }
+}
+
+.footer__link_whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__link-arrow {
+  width: 18px;
+  height: 2px;
+  position: relative;
+  background: var(--font-color);
+  transition: width .4s var(--app-transition);
+}
+
+.footer__link-arrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%) rotate(225deg);
+  border: 2px solid var(--font-color);
+  border-top: none;
+  border-right: none;
+}
+
+.footer__link_whatsapp:hover .footer__link-arrow {
+  width: 32px;
+}
+
+.footer__nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.footer__nav .footer__link {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: var(--font-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border-right: 1px solid var(--border-color);
+
+  background: linear-gradient(90deg, #ee7752, #e73c7e, #ee7752, #e73c7e, #23a6d5, #ee7752);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  animation: footerLinkGradient 5s ease-in-out infinite;
+}
+
+.footer__nav .footer__link.active {
+  color: rgba(0, 0, 0, 0)
+}
+
+.footer__nav .footer__link:hover {
+  color: rgba(0, 0, 0, 0)
+}
+
+/* .footer__nav .footer__link.active {} */
+
+.footer__nav .footer__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  background: var(--font-color);
+  transition: width 1s var(--app-transition);
+}
+
+.footer__nav .footer__link.active::before {
+  width: 100%;
+}
+
+.footer__nav .footer__link:last-child {
+  border-right: none;
+}
+
+/* .footer__link-text {} */
+
+@keyframes footerLinkGradient {
+  0% {
+    background-position: 0 0
+  }
+
+  50% {
+    background-position: 200% 0
+  }
+
+  100% {
+    background-position: 0 0
+  }
+}
+
+@media (max-width: 640px) {
+  /* .footer { */
+  /* display: none; */
+  /* } */
+
+  .footer__nav {
+    display: none;
+  }
+
+  .footer__item:nth-child(2) {
+    display: none;
+  }
+
+  .footer__link {
+    font-size: 10;
+  }
+
+  .footer__link-arrow {
+    display: none;
+  }
+}

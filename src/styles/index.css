@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+[data-theme='dark'] {
+  --font-color: white;
+  --app-background: black;
+  --border-color: #303030;
+  --backdrop-background: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme='light'] {
+  --font-color: black;
+  --app-background: white;
+  --border-color: #f5f5f5;
+  --backdrop-background: rgba(255, 255, 255, 0.7);
+}
+
+:root {
+  --app-height: 100%;
+  --app-header-height: 64px;
+  --app-content-height: 100%;
+  --app-content-max-height: calc(100% - var(--app-header-height) - var(--app-footer-height));
+  --app-main-height: 100%;
+  --app-sidebar-width: 64px;
+  --app-sidebar-height: 100%;
+  --app-main-width: 100%;
+  --app-main-height: 100%;
+  --app-footer-height: 64px;
+  --font-color: white;
+  --background-color: white;
+  --border-color: #252525;
+  --app-background: black;
+  --app-transition: cubic-bezier(0.25, 0.35, 0.2, 1);
+  --app-gradient: linear-gradient(90deg, #ee7752, #e73c7e, #ee7752, #e73c7e, #23a6d5, #ee7752);
+    font-family: 'RFDewi';
+    letter-spacing: 1px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.container {
+  padding: 0 24px;
+}
+
+a {
+  color: var(--font-color);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll {
+  height: var(--app-main-height);
+  overflow-x: auto;
+  border:1px #ccc solid;
+}
+
+.gradient {
+  background-image: linear-gradient(90deg, #ee7752, #e73c7e, #ee7752, #e73c7e, #23a6d5, #ee7752);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 20s linear infinite;
+  background-size: 400%;
+}
+@keyframes gradient {
+  from {
+    background-position: 0 center
+  }
+  to {
+    background-position: 400% center
+  }
+}

@@ -1,0 +1,53 @@
+.form {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  padding: 18px;
+  position: relative;
+  background: var(--app-background);
+  
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .4s var(--app-transition), transform .4s var(--app-transition);
+}
+
+.form__title {
+  margin: 0 0 24px 0;
+}
+
+.form__input {
+  width: 100%;
+  color: var(--font-color);
+  padding: 18px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  outline: none;
+}
+
+.form__button {
+  width: 100%;
+  color: var(--app-background);
+  outline: none;
+  padding: 18px 0;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--font-color);
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  margin: 24px 0 0 0;
+}
+
+.form__button_active {
+  animation-name: form__success;
+}
+
+@keyframes form__success {
+  from {
+
+  }
+
+  to {
+
+  }
+}

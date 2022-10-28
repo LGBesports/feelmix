@@ -1,0 +1,296 @@
+.header {
+  width: 100%;
+  height: 100%;
+}
+
+.header__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__item {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header__logo {
+  width: 145px;
+  /* height: 100%; */
+  position: relative !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.header__logo-src {
+  animation-name: header__logo_animation_out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+  animation-duration: .3s;
+}
+
+.header__logo:hover .header__logo-src {
+  animation-name: header__logo_animation_in;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: .3s;
+}
+
+@keyframes header__logo_animation_in {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 80%);
+  }
+}
+
+@keyframes header__logo_animation_out {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, -80%);
+  }
+}
+
+.header__logo-src svg {
+  max-width: 112px;
+}
+
+.header__logo-src::after {
+  content: 'Feel our skill mix';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, 100%);
+  white-space: nowrap;
+}
+
+.header__logo-src::before {
+  content: 'Feel our skill mix';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -200%);
+  white-space: nowrap;
+}
+
+.header__burger {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.header__burger-icon {
+  width: 24px;
+  height: 2px;
+  background: var(--font-color);
+  transition: width .2s var(--app-transition);
+}
+
+.header__burger::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--font-color);
+  transition: width .2s var(--app-transition);
+}
+
+.header__burger::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background: var(--font-color);
+  transition: width .2s var(--app-transition);
+}
+
+.header__burger_active .header__burger-icon {
+  width: 0;
+}
+
+.header__burger_active.header__burger::after {
+  width: 24px;
+  transition-delay: 0.3s;
+}
+
+.header__burger_active.header__burger::before {
+  width: 24px;
+  transition-delay: 0.2s;
+}
+
+/* .header__burger .header__burger-icon:nth-child(1) {transition-delay: 0s;} */
+/* .header__burger .header__burger-icon:nth-child(2) {transition-delay: 0.1s;} */
+/* .header__burger .header__burger-icon:nth-child(3) {transition-delay: 0.2s;} */
+
+/* .header__burger_active .header__burger-icon:nth-child(1) {transition-delay: 0s;} */
+/* .header__burger_active .header__burger-icon:nth-child(2) {transition-delay: 0.1s;} */
+/* .header__burger_active .header__burger-icon:nth-child(3) {transition-delay: 0.2s;} */
+
+.header__pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.header__pdf-icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--font-color);
+  /* background: var(--border-color); */
+  /* background: var(--font-color); */
+}
+
+.header__pdf-text {
+  position: relative;
+  /* transform: translate(0, -145%); */
+  animation-name: header__pdf-text_animation_out;
+  animation-fill-mode: backwards;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+  animation-duration: .4s;
+  /* animation-play-state: unset; */
+}
+
+.header__pdf-text::before {
+  content: 'DOWNLOAD PRESENTATION';
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* .header__pdf-text::after {
+  content: 'DOWNLOAD PRESENTATION';
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+} */
+
+.header__pdf-icon::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%) rotate(45deg);
+  border: 2px solid var(--font-color);
+  border-top: none;
+  border-left: none;
+  z-index: 2;
+}
+
+.header__pdf-icon::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: linear-gradient(90deg, #ee7752, #e73c7e, #ee7752, #e73c7e, #23a6d5, #ee7752);
+  background-size: 800% 800%;
+  transition: width .2s var(--app-transition), height .2s var(--app-transition);
+  animation: header__pdf_animation 50s linear infinite;
+}
+
+/* .header__pdf:hover .header__pdf-icon::before {
+  border-color: white;
+}
+
+.header__pdf:hover .header__pdf-icon::after {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+} */
+
+@keyframes header__pdf_animation {
+  0% {
+    background-position: 0 0
+  }
+
+  50% {
+    background-position: 800% 0
+  }
+
+  100% {
+    background-position: 0 0
+  }
+}
+
+.header__pdf:hover .header__pdf-text {
+  animation-name: header__pdf-text_animation_in;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: .4s;
+}
+
+@keyframes header__pdf-text_animation_in {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 150%);
+  }
+}
+
+@keyframes header__pdf-text_animation_out {
+  from {
+    transform: translate(0, 150%);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .header__pdf {
+    display: none;
+  }
+}

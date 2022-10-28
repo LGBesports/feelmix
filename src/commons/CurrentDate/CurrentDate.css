@@ -1,0 +1,16 @@
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.date__date-value,
+.date__time-value {
+  font-size: 12px;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
