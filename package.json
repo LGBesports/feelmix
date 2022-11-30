@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.1",
     "framer-motion": "^6.3.11",
+    "lazyload": "^2.0.0-rc.2",
     "lodash": "^4.17.21",
     "react": "^18.1.0",
     "react-creative-cursor": "^1.2.2",
@@ -22,6 +23,7 @@
     "swiper": "^8.2.2",
     "use-interval": "^1.4.0",
     "use-local-storage": "^2.3.6",
+    "videojs-resolution-switcher": "^0.4.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

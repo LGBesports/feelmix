@@ -5,15 +5,15 @@ import { Scrollbar, Mousewheel, FreeMode, Navigation } from 'swiper'
 import { useInView } from 'react-intersection-observer'
 import cn from 'classnames'
 
-import GameDev from '../../img/GameDev.gif'
-import Motion from '../../img/Motion.gif'
-import ThreeD from '../../img/3D.gif'
-import TwoD from '../../img/2D.gif'
+import GameDev from '../../img/Video4-400.gif'
+import Motion from '../../img/Video2-400.gif'
+import ThreeD from '../../img/Video1-400.gif'
+import TwoD from '../../img/Video3-400.gif'
 
-import video1 from '../../videos/video1.mp4'
-import video2 from '../../videos/video2.mp4'
-import video3 from '../../videos/video3.mp4'
-import video4 from '../../videos/video4.mp4'
+import video1 from '../../videos/video1.mov'
+import video2 from '../../videos/video2.mov'
+import video3 from '../../videos/video3.mov'
+import video4 from '../../videos/video4.mov'
 
 import 'swiper/css'
 import "swiper/css/scrollbar"
@@ -46,7 +46,9 @@ export const Showreels = ({ setVideo, setVideoTitle }) => {
       },
       className: 'swiper',
     })
+    
   }, [])
+
 
   return (
     <div className={cn('showreels', { ['showreels_active']: inView })} ref={ref}>
@@ -114,7 +116,7 @@ export const Showreels = ({ setVideo, setVideoTitle }) => {
                 </svg>
               </Link>
 
-              <img src={ThreeD} alt="" />
+              <img  src={ThreeD} alt="" />
             </div>
 
             <div className="showreels__item swiper-slide">
@@ -135,7 +137,7 @@ export const Showreels = ({ setVideo, setVideoTitle }) => {
                 </svg>
               </Link>
 
-              <img src={TwoD} alt="" />
+              <img  src={TwoD} alt="" />
             </div>
 
             <div className="showreels__item swiper-slide">
@@ -156,7 +158,7 @@ export const Showreels = ({ setVideo, setVideoTitle }) => {
                 </svg>
               </Link>
 
-              <img src={Motion} alt="" />
+              <img  src={Motion} alt="" />
             </div>
 
             <div className="showreels__item swiper-slide">
@@ -177,7 +179,7 @@ export const Showreels = ({ setVideo, setVideoTitle }) => {
                 </svg>
               </Link>
 
-              <img src={GameDev} alt="" />
+              <img  src={GameDev} alt="" />
             </div>
           </div>
 

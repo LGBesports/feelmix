@@ -44,14 +44,14 @@ export const Menu = ({ setMenuOpen, menuOpen, theme, switchTheme }) => {
             id='nightmode'
             type="checkbox"
             onChange={() => switchTheme(!theme)}
-            defaultChecked={theme === 'dark' ? null : 'defaultChecked'}
+            defaultChecked={theme === 'defaultChecked' ? null : 'dark'}
           />
           <label className="menu__toggle" htmlFor='nightmode' />
         </label>
 
         <div className="menu__contacts">
           <a className="menu__mail" data-cursor-size="8px" href='mailto:hello@feelmix.pro'>HELLO@FEELMIX.PRO</a>
-          <a className="menu__tel" data-cursor-size="8px" href='tel:+9720509341150'>+972 050 934 11 50</a>
+          <a className="menu__tel" data-cursor-size="8px" href='https://www.linkedin.com/in/illia-tkachenko'>LinkedIn</a>
         </div>
 
         <a
@@ -69,7 +69,7 @@ export const Menu = ({ setMenuOpen, menuOpen, theme, switchTheme }) => {
           </div>
         </a>
 
-        <Form />
+
       </div>
     </div>
   )

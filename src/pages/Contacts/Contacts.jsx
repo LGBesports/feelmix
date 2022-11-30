@@ -1,4 +1,4 @@
-import { Form } from '../../commons'
+
 import { useInView } from 'react-intersection-observer'
 import cn from 'classnames'
 import './Contacts.css'
@@ -17,7 +17,7 @@ export const Contacts = () => {
 
           <div className="contacts__wrapper">
             <div className="contacts__wrap">
-              <div className="contacts__description">You can E-mail or WhatsApp us</div>
+              <div className="contacts__description">You can e-mail us or contact the founder on LinkedIn</div>
               <a className="contacts__link" data-cursor-size="8px" href="mailto:hello@feelmix.pro">hello@feelmix.pro</a>
               <a className="contacts__link" data-cursor-size="8px" href="https://www.linkedin.com/in/illia-tkachenko">LinkedIn</a>
             </div>
@@ -32,7 +32,7 @@ export const Contacts = () => {
           </div>
         </div>
 
-        <Form />
+
       </div>
     </div >
   )

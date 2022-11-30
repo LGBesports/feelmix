@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import useLocalStorage from 'use-local-storage'
-import { useLocation } from 'react-router-dom'
+import {BrowserRouter} from "react-router-dom";
 import { Header, Main, Footer, Menu } from './comps'
 import { CurrentDate } from './commons'
 
@@ -10,7 +10,7 @@ import 'react-creative-cursor/dist/styles.css'
 import './styles/App.css'
 
 const App = () => {
-  const location = useLocation()
+
   const [menuOpen, setMenuOpen] = useState(false)
   const [focusedOpen, setFocusedOpen] = useState(false)
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -18,18 +18,17 @@ const App = () => {
   const backgroundVideo = useRef(null)
 
   const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
     setTheme(newTheme)
   }
 
-  useEffect(() => {
-    backgroundVideo.current.play()
-  }, [backgroundVideo])
+
 
   return (
+      <BrowserRouter >
     <div
       // eslint-disable-next-line
-      className={cn('app', { ['app_home']: location.pathname === '/' })}
+      className={cn('app')}
       data-theme={theme}
       data-cursor-exclusion
     >
@@ -120,6 +119,7 @@ const App = () => {
         <Footer setMenuOpen={setMenuOpen} setFocusedOpen={setFocusedOpen} />
       </div>
     </div>
+        </BrowserRouter>
   )
 }
 

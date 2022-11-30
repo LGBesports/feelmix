@@ -7,7 +7,7 @@ export const Footer = ({ setMenuOpen, setFocusedOpen }) => {
       <div className='footer__container container'>
         <div className='footer__item footer__item_mail'>
           <a className='footer__link' target="_blank" rel="noreferrer" data-cursor-size="8px" href='mailto:hello@feelmix.pro'>
-            <div className="footer__link-text">HELLO@FEELMIX.PRO</div>
+            <div className="footer__link-text">hello@feelmix.pro</div>
           </a>
         </div>
 
@@ -20,7 +20,7 @@ export const Footer = ({ setMenuOpen, setFocusedOpen }) => {
                 setFocusedOpen(false)
                 setMenuOpen(false)
               }}
-              to='./'
+              to='/'
             >
               <div className='footer__link-text'>HOME</div>
             </NavLink>
@@ -32,7 +32,7 @@ export const Footer = ({ setMenuOpen, setFocusedOpen }) => {
                 setFocusedOpen(false)
                 setMenuOpen(false)
               }}
-              to='./about'>
+              to='/about'>
               <div className='footer__link-text'>ABOUT</div>
             </NavLink>
 
@@ -43,7 +43,7 @@ export const Footer = ({ setMenuOpen, setFocusedOpen }) => {
                 setFocusedOpen(false)
                 setMenuOpen(false)
               }}
-              to='./showreels'>
+              to='/showreels'>
               <div className='footer__link-text'>SHOWREELS</div>
             </NavLink>
 
@@ -54,7 +54,7 @@ export const Footer = ({ setMenuOpen, setFocusedOpen }) => {
                 setFocusedOpen(false)
                 setMenuOpen(false)
               }}
-              to='./contacts'>
+              to='/contacts'>
               <div className='footer__link-text'>CONTACTS</div>
             </NavLink>
           </div>
@@ -66,9 +66,9 @@ export const Footer = ({ setMenuOpen, setFocusedOpen }) => {
             target="_blank"
             rel="noreferrer"
             data-cursor-size="8px"
-            href='whatsapp://send?phone=9720509341150'
+            href='https://www.linkedin.com/in/illia-tkachenko'
           >
-            WHATSAPP US
+            LinkedIn
             <div className='footer__link-arrow' />
           </a>
         </div>

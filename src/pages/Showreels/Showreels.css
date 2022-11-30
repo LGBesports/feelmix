@@ -116,6 +116,11 @@
   background: var(--app-background);
   pointer-events: none;
 }
+.showreels__block .showreels__item video {
+  min-height: 300px;
+  opacity: .4;
+
+}
 
 .showreels__description {
   opacity: .5;

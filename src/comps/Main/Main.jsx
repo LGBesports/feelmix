@@ -12,6 +12,7 @@ export const Main = ({
   const [videoTitle, setVideoTitle] = useState()
 
   return (
+
     <div className='main'>
       <div className="main__overflow">
         <Routes>
@@ -62,5 +63,6 @@ export const Main = ({
         </Routes>
       </div>
     </div >
+
   )
 }
